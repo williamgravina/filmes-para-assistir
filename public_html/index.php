@@ -43,50 +43,53 @@ require_once '_menu.php';
 
     <div class="filmesParaAssistir">
         <h2>Filmes para assistir</h2>
-        <table class="table tabela table-hover table-dark">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Nome do filme</th>
-                    <th>Categoria</th>
-                    <th>Prioridade</th>
-                    <th>Plataforma</th>
-                    <th>Quando foi adicionado</th>
-                    <th>Assistiu?</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Homem de Ferro</td>
-                    <td>Herois</td>
-                    <td>Alta</td>
-                    <td>Netflix</td>
-                    <td>22/02/2019</td>
-                    <td><form>
-                            <button class="btn btn-light" type="submit">Assisti</button>
-                        </form></td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>2</td>
-                    <td>Homem de Ferro 2</td>
-                    <td>Herois</td>
-                    <td>Média</td>
-                    <td>Netflix</td>
-                    <td>24/03/2019</td>
-                    <td><form>
-                            <button class="btn btn-light" type="submit">Assisti</button>
-                        </form></td>
-                </tr>
-            </tbody>
-        </table>
+        <form action="notaDoFilme.php">
+            <table class="table tabela table-hover table-dark">
+                <thead class="thead-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Nome do filme</th>
+                        <th>Categoria</th>
+                        <th>Prioridade</th>
+                        <th>Plataforma</th>
+                        <th>Quando foi adicionado</th>
+                        <th>Assistiu?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Homem de Ferro</td>
+                        <td>Herois</td>
+                        <td>Alta</td>
+                        <td>Netflix</td>
+                        <td>22/02/2019</td>
+                        <td><form>
+                                <button class="btn btn-light" type="submit">Assisti</button>
+                            </form></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>Homem de Ferro 2</td>
+                        <td>Herois</td>
+                        <td>Média</td>
+                        <td>Netflix</td>
+                        <td>24/03/2019</td>
+                        <td><form>
+                                <button class="btn btn-light" type="submit">Assisti</button>
+                            </form></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
+
     <div class="filmesAssistidos">
         <h2>Filmes assistidos</h2>
         <table class="table tabela table-hover table-dark">
-            <thead>
+            <thead class="thead-light">
                 <tr>
                     <th>#</th>
                     <th>Nome do filme</th>
