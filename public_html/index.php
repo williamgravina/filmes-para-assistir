@@ -104,6 +104,15 @@ require_once '_menu.php';
                     <td>26/02/2019</td>
                 </tr>
             </tbody>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Homem de Ferro</td>
+                    <td>Herois</td>
+                    <td>5</td>
+                    <td>26/02/2019</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 
