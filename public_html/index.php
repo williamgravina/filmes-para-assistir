@@ -31,16 +31,16 @@ require_once '_menu.php';
                 <option value="Média">Média</option>
                 <option value="Baixa">Baixa</option>
             </select>
-<select class="form-control camposDosFormularios" id="plataforma">
-    <option selected>Plataforma</option>
-    <option value="Netflix">Netflix</option>
-    <option value="Torrent - Baixei">Torrent - Baixei</option>
-    <option value="Torrent - Preciso baixar">Torrent - Preciso baixar</option>
+            <select class="form-control camposDosFormularios" id="plataforma">
+                <option selected>Plataforma</option>
+                <option value="Netflix">Netflix</option>
+                <option value="Torrent - Baixei">Torrent - Baixei</option>
+                <option value="Torrent - Preciso baixar">Torrent - Preciso baixar</option>
             </select>
             <button type="submit" class="btn btn-success camposDosFormularios">Adicionar</button>
         </form>
     </div>
-    
+
     <div class="filmesParaAssistir">
         <h2>Filmes para assistir</h2>
     </div>
