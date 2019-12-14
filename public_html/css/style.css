@@ -1,0 +1,39 @@
+body{
+    font-family: 'Roboto Mono', monospace;
+    background-color: #211A1E;
+}
+h1{
+    text-align: center;
+    font-size: 4em;
+    text-transform: uppercase;
+    color: #F8FFE5;
+}
+h2{
+    text-align: center;
+}
+.adicionarFilme{
+    width: 70%;
+    margin: 1.5em 15%;
+    border: solid 5px #F8FFE5;
+    color: #F8FFE5;
+    text-transform: capitalize;
+}
+.filmesParaAssistir{
+    width: 45%;
+    margin: 1.5em 2.5%;
+    float: left;
+    color: #F8FFE5;
+    text-transform: capitalize;
+    border: solid 5px #F8FFE5;
+}
+.filmesAssistidos{
+    width: 45%;
+    color: #F8FFE5;
+    text-transform: capitalize;
+    margin: 1.5em 2.5%;
+    float: right;
+    border: solid 5px #F8FFE5;
+}
+.camposDosFormularios{
+    margin: 1em;
+}
