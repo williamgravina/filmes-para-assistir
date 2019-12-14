@@ -52,6 +52,7 @@ require_once '_menu.php';
                     <th>Prioridade</th>
                     <th>Plataforma</th>
                     <th>Quando foi adicionado</th>
+                    <th>Assistiu?</th>
                 </tr>
             </thead>
             <tbody>
@@ -62,6 +63,9 @@ require_once '_menu.php';
                     <td>Alta</td>
                     <td>Netflix</td>
                     <td>22/02/2019</td>
+                    <td><form>
+                            <button class="btn btn-light" type="submit">Assisti</button>
+                        </form></td>
                 </tr>
             </tbody>
             <tbody>
@@ -72,12 +76,35 @@ require_once '_menu.php';
                     <td>Média</td>
                     <td>Netflix</td>
                     <td>24/03/2019</td>
+                    <td><form>
+                            <button class="btn btn-light" type="submit">Assisti</button>
+                        </form></td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="filmesAssistidos">
         <h2>Filmes assistidos</h2>
+        <table class="table tabela table-hover table-dark">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome do filme</th>
+                    <th>Categoria</th>
+                    <th>Nota</th>
+                    <th>Quando foi assistido</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Homem de Ferro</td>
+                    <td>Herois</td>
+                    <td>5</td>
+                    <td>26/02/2019</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </div>
