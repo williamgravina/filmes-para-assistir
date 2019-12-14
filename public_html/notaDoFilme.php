@@ -3,7 +3,7 @@
     require_once '_menu.php';
 ?>
 
-<form class="form-inline formNomeDoFilme">
+<form action="index.php" class="form-inline formNomeDoFilme">
     <label class="nomeDoFilme">Nome do filme</label>
     <select class="form-control camposDosFormularios" id="notaDoFilme">
                 <option selected>Nota do filme</option>
