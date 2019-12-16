@@ -9,13 +9,12 @@ require_once 'funcoes.php';
     <h1>Lista de filmes</h1>
 </header>
 <div>
-    <?php
-    if(array_key_exists("adicionado", $_GET) && $_GET["adicionado"]==true){ ?>
-    <p class="alert-success text-centro">Filme adicionado com sucesso</p>
-<?php}else{?>
-        
-<?php } 
-?>
+    <?php if (array_key_exists("adicionado", $_GET) && $_GET["adicionado"] == true) { ?>
+        <p class="alert-success text-centro">Filme adicionado com sucesso</p>
+    <?php } else { ?>
+
+    <?php }
+    ?>
     <div class="adicionarFilme">
         <h2>Adicionar filme</h2>
         <form action="adiciona-filme.php" method="post" class="form-inline centro">
@@ -67,23 +66,27 @@ require_once 'funcoes.php';
                 </thead>
                 <tbody>
                     <?php
-    $filmes = listaFilmes($conexao);
-    foreach ($filmes as $filme) :
-        ?>
-                    <tr>
-                        <td><?= $filme['id']?></td>
-                        <td><?= $filme['nomeDoFilme']?></td>
-                        <td><?= $filme['categoria']?></td>
-                        <td><?= $filme['prioridade']?></td>
-                        <td><?= $filme['plataforma']?></td>
-                        <td>22/02/2019</td>
-                        <td><form>
-                                <button class="btn btn-light" type="submit">Assisti</button>
-                            </form></td>
-                    </tr>
-                    <?php
-            endforeach;
-    ?>
+                    $filmes = listaFilmes($conexao);
+                    foreach ($filmes as $filme) :
+                        ?>
+                        <tr>
+                            <td><?= $filme['id'] ?></td>
+                            <td><?= $filme['nomeDoFilme'] ?></td>
+                            <td><?= $filme['categoria'] ?></td>
+                            <td><?= $filme['prioridade'] ?></td>
+                            <td><?= $filme['plataforma'] ?></td>
+                            <td>22/02/2019</td>
+                            <td>
+                                <form action="notaDoFilme.php">
+                                    <input type="hidden" name="nomeDoFilme" value="<?=$filme['nomeDoFilme']?>">
+                                    <input type="hidden" name="id" value="<?=$filme['id']?>">
+                                    <button class="btn btn-light">Assisti</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <?php
+                    endforeach;
+                    ?>
                 </tbody>
             </table>
         </form>

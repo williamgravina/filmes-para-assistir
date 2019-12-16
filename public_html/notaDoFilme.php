@@ -1,10 +1,13 @@
 <?php
     require_once '_cabecalho.php';
     require_once '_menu.php';
+    require_once '_conecta.php';
+        
+      $nomeDoFilme = $_GET['nomeDoFilme'];
 ?>
 
 <form action="index.php" class="form-inline formNomeDoFilme">
-    <label class="nomeDoFilme">Nome do filme</label>
+    <label class="nomeDoFilme"><?=$nomeDoFilme?></label>
     <select class="form-control camposDosFormularios" id="notaDoFilme">
                 <option selected>Nota do filme</option>
                 <option value="1">1</option>

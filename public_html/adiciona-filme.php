@@ -9,7 +9,7 @@ $prioridade = $_POST["prioridade"];
 $plataforma = $_POST["plataforma"];
 
 if(insereFilme($conexao, $nomeDoFilme, $categoria, $prioridade, $plataforma)){?>
-           <p class="text-success centro">O filme <?= $nomeDoFilme ?> foi adicionado com sucesso</p>
+           <p class="text-success text-centro">O filme <?= $nomeDoFilme ?> foi adicionado com sucesso</p>
          <?php } else { 
              $msg = mysqli_error($conexao);
              ?> <p class="text-danger">O filme <?= $nomeDoFilme ?> não foi adicionado: <?= $msg?></p>
