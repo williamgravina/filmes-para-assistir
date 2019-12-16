@@ -1,15 +1,24 @@
 <?php
 require_once '_cabecalho.php';
 require_once '_menu.php';
+require_once '_conecta.php';
+require_once 'funcoes.php';
 ?>
 
 <header>
     <h1>Lista de filmes</h1>
 </header>
 <div>
+    <?php
+    if(array_key_exists("adicionado", $_GET) && $_GET["adicionado"]==true){ ?>
+    <p class="alert-success text-centro">Filme adicionado com sucesso</p>
+<?php}else{?>
+        
+<?php } 
+?>
     <div class="adicionarFilme">
         <h2>Adicionar filme</h2>
-        <form action="adiciona-filme.php" class="form-inline centro">
+        <form action="adiciona-filme.php" method="post" class="form-inline centro">
             <input name="nomeDoFilme" placeholder="Nome do Filme" class="form-control camposDosFormularios" type="text">
             <select name="categoria" class="form-control camposDosFormularios" id="categoria">  
                 <option selected>Categoria</option>
@@ -57,30 +66,24 @@ require_once '_menu.php';
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+    $filmes = listaFilmes($conexao);
+    foreach ($filmes as $filme) :
+        ?>
                     <tr>
-                        <td>1</td>
-                        <td>homem de ferro</td>
-                        <td>Herois</td>
-                        <td>Alta</td>
-                        <td>Netflix</td>
+                        <td><?= $filme['id']?></td>
+                        <td><?= $filme['nomeDoFilme']?></td>
+                        <td><?= $filme['categoria']?></td>
+                        <td><?= $filme['prioridade']?></td>
+                        <td><?= $filme['plataforma']?></td>
                         <td>22/02/2019</td>
                         <td><form>
                                 <button class="btn btn-light" type="submit">Assisti</button>
                             </form></td>
                     </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>2</td>
-                        <td>Homem de Ferro 2</td>
-                        <td>Herois</td>
-                        <td>Média</td>
-                        <td>Netflix</td>
-                        <td>24/03/2019</td>
-                        <td><form>
-                                <button class="btn btn-light" type="submit">Assisti</button>
-                            </form></td>
-                    </tr>
+                    <?php
+            endforeach;
+    ?>
                 </tbody>
             </table>
         </form>
