@@ -14,7 +14,7 @@ if(insereFilme($conexao, $nomeDoFilme, $categoria, $prioridade, $plataforma)){?>
              $msg = mysqli_error($conexao);
              ?> <p class="text-danger">O filme <?= $nomeDoFilme ?> não foi adicionado: <?= $msg?></p>
            <?php }
-header("Location: index.php?adicionado=true");
+header("Location: pageFilmes.php?adicionado=true");
 die();            
  
 

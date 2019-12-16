@@ -29,3 +29,8 @@ function listaFilmesAssistidos($conexao) {
     }
     return $filmes;
 }
+
+function apagarFilme ($conexao, $id){
+    $query = "delete from filmes where id = '{$id}';";
+    return mysqli_query($conexao, $query);
+}

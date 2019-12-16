@@ -8,5 +8,5 @@
       $id = $_GET['id'];
 
 assistirFilme($conexao, $id);
-header("Location: index.php?assistido=true");
+header("Location: pageFilmes.php?assistido=true");
 die();       
