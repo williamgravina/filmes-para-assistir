@@ -9,9 +9,9 @@ require_once '_menu.php';
 <div>
     <div class="adicionarFilme">
         <h2>Adicionar filme</h2>
-        <form class="form-inline centro">
-            <input placeholder="Nome do Filme" class="form-control camposDosFormularios" type="text">
-            <select class="form-control camposDosFormularios" id="categoria">
+        <form action="adiciona-filme.php" class="form-inline centro">
+            <input name="nomeDoFilme" placeholder="Nome do Filme" class="form-control camposDosFormularios" type="text">
+            <select name="categoria" class="form-control camposDosFormularios" id="categoria">  
                 <option selected>Categoria</option>
                 <option value="Ação e aventura">Ação e aventura</option>
                 <option value="Terror">Terror</option>
@@ -24,14 +24,14 @@ require_once '_menu.php';
                 <option value="Documentários">Documentários</option>
                 <option value="Herois">Herois</option>
             </select>
-            <select class="form-control camposDosFormularios" id="prioridade">
+            <select name="prioridade" class="form-control camposDosFormularios" id="prioridade">
                 <option selected>Prioridade</option>
                 <option value="Preciso ver agora">Preciso ver agora</option>
                 <option value="Alta">Alta</option>
                 <option value="Média">Média</option>
                 <option value="Baixa">Baixa</option>
             </select>
-            <select class="form-control camposDosFormularios" id="plataforma">
+            <select name="plataforma" class="form-control camposDosFormularios" id="plataforma">
                 <option selected>Plataforma</option>
                 <option value="Netflix">Netflix</option>
                 <option value="Torrent - Baixei">Torrent - Baixei</option>
@@ -59,7 +59,7 @@ require_once '_menu.php';
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Homem de Ferro</td>
+                        <td>homem de ferro</td>
                         <td>Herois</td>
                         <td>Alta</td>
                         <td>Netflix</td>
