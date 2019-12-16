@@ -24,7 +24,7 @@ require_once 'funcoes.php';
         <form action="adiciona-filme.php" method="post" class="form-inline centro">
             <input name="nomeDoFilme" placeholder="Nome do Filme" class="form-control camposDosFormularios" type="text">
             <select name="categoria" class="form-control camposDosFormularios" id="categoria">  
-                <option selected>Categoria</option>
+                <option selected disabled>Categoria</option>
                 <option value="Ação e aventura">Ação e aventura</option>
                 <option value="Terror">Terror</option>
                 <option value="Comédia">Comédia</option>
@@ -37,14 +37,12 @@ require_once 'funcoes.php';
                 <option value="Herois">Herois</option>
             </select>
             <select name="prioridade" class="form-control camposDosFormularios" id="prioridade">
-                <option selected>Prioridade</option>
-                <option value="Preciso ver agora">Preciso ver agora</option>
+                <option selected disabled>Prioridade</option>
                 <option value="Alta">Alta</option>
-                <option value="Média">Média</option>
                 <option value="Baixa">Baixa</option>
             </select>
             <select name="plataforma" class="form-control camposDosFormularios" id="plataforma">
-                <option selected>Plataforma</option>
+                <option selected disabled>Plataforma</option>
                 <option value="Netflix">Netflix</option>
                 <option value="Torrent - Baixei">Torrent - Baixei</option>
                 <option value="Torrent - Preciso baixar">Torrent - Preciso baixar</option>
