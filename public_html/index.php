@@ -10,11 +10,12 @@ require_once 'funcoes.php';
 </header>
 <div>
     <?php if (array_key_exists("adicionado", $_GET) && $_GET["adicionado"] == true) { ?>
-        <p class="alert-success text-centro">Filme adicionado com sucesso</p>
-    <?php } else { ?>
-
+    <p class="alert-success text-centro">Filme adicionado com sucesso</p>
+    <?php } elseif (array_key_exists("assistido", $_GET) && $_GET["assistido"] == true) { ?> 
+    <p class="alert-success text-centro">Filme assistido</p>
     <?php }
     ?>
+
     <div class="adicionarFilme">
         <h2>Adicionar filme</h2>
         <form action="adiciona-filme.php" method="post" class="form-inline centro">
@@ -60,7 +61,6 @@ require_once 'funcoes.php';
                         <th>Categoria</th>
                         <th>Prioridade</th>
                         <th>Plataforma</th>
-                        <th>Quando foi adicionado</th>
                         <th>Assistiu?</th>
                     </tr>
                 </thead>
@@ -68,23 +68,22 @@ require_once 'funcoes.php';
                     <?php
                     $filmes = listaFilmes($conexao);
                     foreach ($filmes as $filme) :
-                        ?>
-                        <tr>
-                            <td><?= $filme['id'] ?></td>
-                            <td><?= $filme['nomeDoFilme'] ?></td>
-                            <td><?= $filme['categoria'] ?></td>
-                            <td><?= $filme['prioridade'] ?></td>
-                            <td><?= $filme['plataforma'] ?></td>
-                            <td>22/02/2019</td>
-                            <td>
-                                <form action="notaDoFilme.php">
-                                    <input type="hidden" name="nomeDoFilme" value="<?=$filme['nomeDoFilme']?>">
-                                    <input type="hidden" name="id" value="<?=$filme['id']?>">
-                                    <button class="btn btn-light">Assisti</button>
-                                </form>
-                            </td>
-                        </tr>
-                        <?php
+                    ?>
+                    <tr>
+                        <td><?= $filme['id'] ?></td>
+                        <td><?= $filme['nomeDoFilme'] ?></td>
+                        <td><?= $filme['categoria'] ?></td>
+                        <td><?= $filme['prioridade'] ?></td>
+                        <td><?= $filme['plataforma'] ?></td>
+                        <td>
+                            <form action="notaDoFilme.php">
+                                <input type="hidden" name="nomeDoFilme" value="<?= $filme['nomeDoFilme'] ?>">
+                                <input type="hidden" name="id" value="<?= $filme['id'] ?>">
+                                <button class="btn btn-light">Assisti</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <?php
                     endforeach;
                     ?>
                 </tbody>
@@ -100,28 +99,24 @@ require_once 'funcoes.php';
                     <th>#</th>
                     <th>Nome do filme</th>
                     <th>Categoria</th>
-                    <th>Nota</th>
-                    <th>Quando foi assistido</th>
+
                 </tr>
             </thead>
             <tbody>
+                <?php
+                $filmes = listaFilmesAssistidos($conexao);
+                foreach ($filmes as $filme) :
+                ?>
                 <tr>
-                    <td>1</td>
-                    <td>Homem de Ferro</td>
-                    <td>Herois</td>
-                    <td>5</td>
-                    <td>26/02/2019</td>
+                    <td><?= $filme['id'] ?></td>
+                    <td><?= $filme['nomeDoFilme'] ?></td>
+                    <td><?= $filme['categoria'] ?></td>
                 </tr>
+                <?php
+                    endforeach;
+                    ?>
             </tbody>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Homem de Ferro</td>
-                    <td>Herois</td>
-                    <td>5</td>
-                    <td>26/02/2019</td>
-                </tr>
-            </tbody>
+
         </table>
     </div>
 
