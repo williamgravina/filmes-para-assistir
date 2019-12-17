@@ -8,6 +8,7 @@
         <h1 class="h1Index">Portifólio</h1>
     </div>
     <div class="blocoControleIndex">
+        <h2 class="h2Index">Controle</h1>
         <div> 
             <a href="pageFilmes.php">
                 <img class="img imgFilmes" src="img/logo-filme.jpg">
@@ -28,6 +29,6 @@
                 <img class="img imgTodoist" src="img/logo-todoist.jpeg">
             </a>
         </div>
-        
+        <h1>my frie</h1>
     </div>
 </div>
